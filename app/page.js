@@ -1,67 +1,48 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.css"
 
 export default function Home() {
     return (
-        <main className={styles.main}>
+        <>
+            <nav className={styles.mainnav}>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
 
-            <div className={styles.center}>
-                <h1>Hunting Coder</h1>
-            </div>
+            <main className={styles.main}>
+                <div className={styles.center}>
+                    <h1>Hunting Coder</h1>
+                </div>
 
-            <h3>A blog for hunting coders by a hunting coder</h3>
+                <h3>A blog for hunting coders by a hunting coder</h3>
 
-            <div className={styles.grid}>
-                <a
-                    href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Docs <span>-&gt;</span>
-                    </h2>
-                    <p>Find in-depth information about Next.js features and API.</p>
-                </a>
+                <div className={styles.blogs}>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                </div>
+            </main>
 
-                <a
-                    href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Learn <span>-&gt;</span>
-                    </h2>
-                    <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-                </a>
-
-                <a
-                    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Templates <span>-&gt;</span>
-                    </h2>
-                    <p>Explore starter templates for Next.js.</p>
-                </a>
-
-                <a
-                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2>
-                        Deploy <span>-&gt;</span>
-                    </h2>
-                    <p>
-                        Instantly deploy your Next.js site to a shareable URL with Vercel.
-                    </p>
-                </a>
-            </div>
-        </main>
+        </>
     );
 }
