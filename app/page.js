@@ -1,14 +1,20 @@
-import styles from "./page.module.css"
+
+
+
+
+import Link from "next/link";                       //  built in next router.......
+import styles from "./page.module.css";
+
 
 export default function Home() {
     return (
         <>
             <nav className={styles.mainnav}>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <Link href="/"><li>Home</li></Link>
+                    <Link href="/about" scroll={false}><li>About</li></Link>                {/** "scroll={false}" avoids to scroll to the top on loding the page.... */}
+                    <Link href="/blog"><li>Blog</li></Link>
+                    <Link href="/contact"><li>Contact</li></Link>
                 </ul>
             </nav>
 
