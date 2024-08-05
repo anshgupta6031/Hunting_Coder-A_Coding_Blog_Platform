@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css";                             //  all the css files which are global(i.e. applied to all the pages of the website.) can only be imported in layout.js
 
 const inter = Inter({ subsets: ["latin"] });
 

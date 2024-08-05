@@ -3,7 +3,7 @@
 
 
 import Link from "next/link";                       //  built in next router.......
-import styles from "./page.module.css";
+import styles from "./page.module.css";             //  if we want to use a specific css file for a specific page we have to import it is a css module.... i.e it can not be imported like the global css files.....
 
 
 export default function Home() {
