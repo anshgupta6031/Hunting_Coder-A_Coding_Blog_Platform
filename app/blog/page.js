@@ -2,13 +2,41 @@
 
 
 
+import Link from 'next/link';
 import React from 'react'
+import styles from "./page.module.css";
+
 
 export default function Blog() {
     return (
-        <div>
-            this is Blog.......
-        </div>
+        <>
+            <div className={styles.container}>
+                <h2 className={styles.heading}>All Blogs</h2>
+
+                <div className={styles.blogs}>
+                    <div className={styles.blogItems}>
+                        <Link href="/blogpost/learn-javascript"><h3>How to learn javascript in 2024.</h3></Link>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                    <div className={styles.blogItems}>
+                        <h3>How to learn javascript in 2024.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 

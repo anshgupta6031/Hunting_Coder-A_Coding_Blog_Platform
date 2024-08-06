@@ -1,0 +1,30 @@
+
+
+
+
+.container {
+    margin: 70px 190px 50px;
+}
+
+
+.heading{
+    margin: 0 1rem;
+    text-decoration: underline;
+}
+
+
+.blogs {
+    margin-top: 2rem;
+}
+
+
+.blogItems {
+    margin: 1rem 0;
+}
+
+
+.blogItems h3{
+    cursor: pointer;
+}
+
+
