@@ -9,8 +9,15 @@ import fs from "node:fs/promises"
 export async function GET(request) {
 
     try {
-        const data = await fs.readdir("blogdata")
-        return NextResponse.json(data)
+        let allBlogs = []
+        const files = await fs.readdir("blogdata")
+
+        for(let i=0; i<files.length; i++){
+            const data = await fs.readFile(("blogdata/" + files[i]), "utf-8")
+            allBlogs.push(JSON.parse(data))
+        }
+
+        return NextResponse.json(allBlogs)
     }
 
     catch (error) {

@@ -1,5 +1,6 @@
 {
     "title": "How to learn javaScript",
     "content": "When you pick up a JavaScript topic to learn, you start by going over any resources that you find helpful. It's an excellent first step, but more is needed for effective learning.The effective way is to create a mind map of JavaScript topics and guide your learning. It will help you to know the concept well and familiarise yourself with related concepts. Another advantage of mind maps is with multiple topics, you form an intersection of common sub-topics to go over multiple times. Here is an example of a mind map to learn the JavaScript this keyword. As you can see, the flow of topics moves logically through progressive concepts to help you get a foundational understanding of the this keyword in JavaScript. Another example could be understanding JavaScript promises. It would help if you started with functions, then the call stack and execution context, then learned about task and job queues and finally promises. It may sound like a time-consuming process, but following the mind map approach to learning fundamentals will save you lots of time in the long run.",
-    "author": "Ansh gupta"
+    "author": "Ansh gupta",
+    "slug": "how-to-learn-javascript"
 }

@@ -1,39 +1,36 @@
-
+"use client"
 
 
 
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./page.module.css";
 
 
 export default function Blog() {
+
+    const [blogs, setBlogs] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:3000/api/blogs")
+            .then((a) => { return a.json() })
+            .then((data) => { setBlogs(data) })
+    }, [])
+
     return (
         <>
             <div className={styles.container}>
                 <h2 className={styles.heading}>All Blogs</h2>
 
                 <div className={styles.blogs}>
-                    <div className={styles.blogItems}>
-                        <Link href="/blogpost/learn-javascript"><h3>How to learn javascript in 2024.</h3></Link>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
-                    </div>
-                    <div className={styles.blogItems}>
-                        <h3>How to learn javascript in 2024.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
-                    </div>
-                    <div className={styles.blogItems}>
-                        <h3>How to learn javascript in 2024.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
-                    </div>
-                    <div className={styles.blogItems}>
-                        <h3>How to learn javascript in 2024.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
-                    </div>
-                    <div className={styles.blogItems}>
-                        <h3>How to learn javascript in 2024.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laboriosam adipisci rem porro minima beatae quas eius aliquid sapiente libero!</p>
-                    </div>
+
+                    {blogs.map((blog) => {
+                        return <div className={styles.blogItems} key={blog.slug}>
+                            <Link href={`/blogpost/${blog.slug}`}><h3>{blog.title}</h3></Link>
+                            <p className={styles.paragraph}>{blog.content.substr(0,400) + " ..."}</p>
+                        </div>
+                    })}
+
                 </div>
             </div>
         </>
@@ -43,10 +40,10 @@ export default function Blog() {
 
 
 
-export const metadata = {                           //  we can add this to give specific title and description for every individual page.....
-    title: "Blog - Hunting Coder",
-    description: "All the blog you need.",
-};
+// export const metadata = {                           //  we can add this to give specific title and description for every individual page.....
+//     title: "Blog - Hunting Coder",
+//     description: "All the blog you need.",
+// };
 
 
 
