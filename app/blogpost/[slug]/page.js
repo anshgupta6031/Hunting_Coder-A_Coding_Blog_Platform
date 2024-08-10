@@ -1,30 +1,26 @@
-"use client"
 
 
 
-import React, { useEffect, useState } from 'react'
-import styles from "./page.module.css"
+
+import React from 'react'
+import Client from './Client'
 
 
-export default function Page({ params }) {
+export default async function page({ params }) {
 
-    const [blog, setBlog] = useState({})
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/api/getblog/${params.slug}`)
-            .then((a) => { return a.json() })
-            .then((data) => { setBlog(data) })
-    }, [])
+    let data = await fetch(`http://localhost:3000/api/getblog/${params.slug}`)
+    let blog = await data.json()
 
     return (
-        <>
-            <div className={styles.container}>
-                <h2 className={styles.heading}>Title : {blog.title}</h2>
-                <div className={styles.content}>{blog.content}</div>
-            </div>
-        </>
+        <Client blog={blog} />
     )
 }
 
 
+
+
+export const metadata = {                           //  we can add this to give specific title and description for every individual page.....
+    title: "Blog - Hunting Coder",
+    description: "All the blog you need.",
+};
 
