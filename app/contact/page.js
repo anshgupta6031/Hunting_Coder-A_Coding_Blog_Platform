@@ -15,10 +15,10 @@ export default function Contact() {
     const [description, setDescription] = useState("")
 
 
-    const handleSubmit = async (e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const data = {name, email, phone, description}
+        const data = { name, email, phone, description }
 
         await fetch("http://localhost:3000/api/postcontact", {
             method: "POST",
@@ -38,11 +38,11 @@ export default function Contact() {
         setDescription("")
     }
 
-    const handleChange = (e)=>{
-        if(e.target.name === "name") setName(e.target.value)
-        if(e.target.name === "email") setEmail(e.target.value)
-        if(e.target.name === "phone") setPhone(e.target.value)
-        if(e.target.name === "description") setDescription(e.target.value)
+    const handleChange = (e) => {
+        if (e.target.name === "name") setName(e.target.value)
+        if (e.target.name === "email") setEmail(e.target.value)
+        if (e.target.name === "phone") setPhone(e.target.value)
+        if (e.target.name === "description") setDescription(e.target.value)
     }
 
     return (

@@ -1,13 +1,9 @@
-
-
-
-
 .container {
     margin: 70px 190px 50px;
 }
 
 
-.heading{
+.heading {
     margin: 0 1rem;
     text-decoration: underline;
 }
@@ -23,11 +19,11 @@
 }
 
 
-.blogItems h3{
+.blogItems h3 {
     cursor: pointer;
 }
 
 
-.paragraph{
+.paragraph {
     margin-top: 0.5rem;
 }

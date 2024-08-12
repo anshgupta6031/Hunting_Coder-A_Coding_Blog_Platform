@@ -12,7 +12,7 @@ export async function GET(request) {
         let allBlogs = []
         const files = await fs.readdir("blogdata")
 
-        for(let i=0; i<files.length; i++){
+        for (let i = 0; i < files.length; i++) {
             const data = await fs.readFile(("blogdata/" + files[i]), "utf-8")
             allBlogs.push(JSON.parse(data))
         }

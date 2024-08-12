@@ -7,7 +7,6 @@ import Client from './Client'
 
 
 export default async function page() {
-
     let data = await fetch("http://localhost:3000/api/blogs")
     let allBlogs = await data.json()
 

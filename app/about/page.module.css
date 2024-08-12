@@ -1,24 +1,18 @@
-
-
-
-
-.container{
+.container {
     max-width: 60vw;
     margin: 40px auto;
 }
 
-.heading{
+.heading {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.subheading{
+.subheading {
     margin-bottom: 10px;
     text-decoration: underline;
 }
 
-.para{
+.para {
     margin-bottom: 15px;
 }
-
-

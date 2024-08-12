@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem;
+  height: 60vh;
 }
 
 
@@ -42,7 +43,7 @@
 
 
 
-.mainnav ul{
+.mainnav ul {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -50,18 +51,18 @@
 }
 
 
-.mainnav ul li{
+.mainnav ul li {
   margin: 0rem 2rem;
   cursor: pointer;
   font-size: large;
 }
 
 
-.blogs{
+.blogs {
   margin-top: 4rem;
 }
 
 
-.blogItems{
+.blogItems {
   margin: 1rem;
 }

@@ -14,7 +14,7 @@ export async function POST(request) {
         let files = await fs.readdir("contactdata")
 
         let max_num = 0
-        for(let i=0; i<files.length; i++){
+        for (let i = 0; i < files.length; i++) {
             max_num = Math.max(max_num, parseInt(files[i].slice(0, -5)))
         }
 

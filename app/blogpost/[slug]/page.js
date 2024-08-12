@@ -7,7 +7,6 @@ import Client from './Client'
 
 
 export default async function page({ params }) {
-
     let data = await fetch(`http://localhost:3000/api/getblog/${params.slug}`)
     let blog = await data.json()
 
